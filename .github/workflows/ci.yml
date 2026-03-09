@@ -1,4 +1,4 @@
-name: ci
+name: parallel job
 
 on:
   pull_request:

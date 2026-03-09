@@ -44,5 +44,5 @@ jobs:
               - name: Run tests
                 run: npm run test -- --coverage
 
-              -name: Style 
+              - name: Style 
                 run: npm run format:check

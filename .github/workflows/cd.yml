@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [style-check-parallel]
+    branches: [main]
 
 jobs:
   deploy:

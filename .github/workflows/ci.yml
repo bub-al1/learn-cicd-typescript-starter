@@ -3,7 +3,7 @@ name: parallel job
 on:
   pull_request:
     branches: [main]
-
+  
 jobs:
   tests:
     name: Tests

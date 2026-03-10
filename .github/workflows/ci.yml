@@ -3,6 +3,8 @@ name: parallel job
 on:
   pull_request:
     branches: [main]
+  push:
+    branches: [style-check-parallel]
 
 jobs:
   tests:

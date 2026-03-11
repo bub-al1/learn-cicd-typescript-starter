@@ -2,8 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [style-check-parallel]
-  workflow_dispatch:  
+    branches: [main] 
 
 jobs:
   deploy:
@@ -24,3 +23,19 @@ jobs:
 
       - name: Build
         run: npm run build
+
+    steps:
+    - id: 'auth'
+      uses: 'google-github-actions/auth@v2'
+      with:
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+    - name: 'Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v3'
+
+    - name: 'Use gcloud CLI'
+      run: 'gcloud info'
+
+    - name: Run and Build
+     run: | 
+      gcloud builds submit --tag us-central1-docker.pkg.dev/notely-489909/notely-ar-repo/notely:latest .

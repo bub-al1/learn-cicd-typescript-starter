@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest";
+import { expect, test } from "vitest";
 import { getAPIKey } from "../api/auth";
 
 test("should return the API key if the authorization header is valid", () => {

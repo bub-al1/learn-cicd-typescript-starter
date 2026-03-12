@@ -5,11 +5,11 @@ on:
     branches: [main] 
 
 jobs:
- deploy:
-   name: Deploy
-   runs-on: ubuntu-latest
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
 
-   steps:
+    steps:
       - name: Check out code
         uses: actions/checkout@v4
 
